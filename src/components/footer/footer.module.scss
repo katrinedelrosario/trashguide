@@ -1,0 +1,50 @@
+
+.footer {
+    width: 100%;
+    margin-top: auto;
+    height: 8vh;
+    border-top: solid 1px #eee;
+    background-color: #fff;
+    color: #999999;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    //display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;     
+        align-items: center; 
+        width: 100%;
+        margin: auto;
+        p, nav, .soMe {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .soMe {
+            gap: 10px;
+        }
+        ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            gap: 20px;
+            list-style-type: none;
+
+            li {
+                margin: 0;
+                a {
+                    color: #999999;
+                    text-decoration: none;
+                    text-transform: capitalize;
+                    font-size: 14px;
+                }
+            }
+
+        }
+    }
+}
