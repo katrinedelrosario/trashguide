@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+//font: 'Mulish', tætteste fundet på 'Muli'
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap'); 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+  body{
+    font-family:var(--text);
+ }
+
+:root {
+    --text: "Open Sans", sans-serif;
+    --nav: "Mulish", sans-serif;
+
+    --primary: #222A41; //title
+    --secondary: #232F44; //text
+
+    --greenActive: #6DA830;
+    --greenBox: #D8EADB;
+    --green-darker: #114D46;
+
+    --black: #000;
+    --white: #fff;
+    --grey-drk: #222A41;
+    --grey: #888888;
+    --grey-lt: #d8d8d8;
+    --greybg: #f2f2f2;
+    --grey-lgtst: #fafafa;
+    
+    --green: #62bb65;
+    --green-drk: #114d46;
+    --green-lt: #6da830;
+
+    --blue-lt: #459eff33;
+
+    //opacity
+    --black-op-lw: #0000000d;
+    --black-op-md: #00000029;
+    --black-op-hg: #00000033;
+
+    --white-op-lw: #ffffffb2;
+    --white-op-md: #ffffff80;
+    --white-op-hg: #ffffff99;
+
+    --green-op-lw: #62BB6500;
+    --green-op-md: #62BB6533;
+}
+
+
