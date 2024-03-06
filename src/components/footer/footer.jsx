@@ -1,29 +1,34 @@
 import { NavLink } from "react-router-dom"
 import style from "../footer/footer.module.scss"
+import logo from "../../assets/images/layout/logo.svg"
+import arrowUp from '../../assets/images/layout/icon-arrow-up.svg'
+
 
 
 export const Footer = () => {
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
     return (
         <footer className={style.footer}>
             <section>
-                <p>© 2021 Hotel Overlook. Alle rettigheder forbeholdt.</p>
-                <div className={style.soMe}>
-                <p><a><img src='https://placehold.it/32x32' alt=''/></a></p>
-                <p><a><img src='https://placehold.it/32x32' alt=''/></a></p>
-                </div>
+                <div className={style.content}>
+            <div className={style.logo}>
+                <img src={logo} alt="Affaldsguiden Logo" />
+                <p>Affaldsguiden</p>
+            </div>
+            <p className={style.firstP}>Vi arbejder for at informere om korrekt affaldssortering. Ved at sortere hjælper du os, men også klimaet.</p>
+            <p className={style.secondP}>©2023 Affaldsguiden.</p>
 
-                <nav>
-                    <ul>
-                        <li><NavLink to="/frontpage">forside</NavLink></li>
-                        <li><NavLink to="/hotels">hoteller & destinationer</NavLink></li>
-                        <li><NavLink to="/rooms">værelser</NavLink></li>
-                        <li><NavLink to="/reservations">reservation</NavLink></li>
-                        <li><NavLink to="/login">login</NavLink></li>
-                    </ul>
-                </nav>
+                </div>
+            <div className={style.backToTop}>
+                <button onClick={scrollToTop}>Back to top <img src={arrowUp} alt="Arrow pointing up" /></button>
+            </div>
             </section>
         </footer>
-        
     )
 }
