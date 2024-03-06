@@ -21,7 +21,7 @@ export const Slider = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setSlideIndex(prevIndex => (prevIndex + 1) % images.length)
-        }, 5000)
+        },1000000000) //SET TO 5000
         return () => clearTimeout(timer)
     }, [slideIndex, images])
 
