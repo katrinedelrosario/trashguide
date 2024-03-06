@@ -1,0 +1,162 @@
+@import url('../../globalStyle.scss');
+.boxContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    z-index: 10;
+    top: 10px;
+    .box {
+        background-color: var(--greenBox);
+        box-shadow: 0 3px 6px var(--boxShadow);
+        width: 30em;
+        height: 13em;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: 0px 3px 6px #00000029;
+        h2 {
+            font-size: 25px;
+            font-weight: 400;
+            color: var(--primary);
+            padding: 1.5em;
+            text-align: center;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5em;
+            margin-top: 0.5em;
+            button {
+                color: var(--white);
+                border: none;
+                border-radius: 6px;
+                background-color: var(--green-darker);
+                cursor: pointer;
+                transition: all 0.2s ease;
+                &:hover {
+                    background-color: var(--green-lt);
+                }
+            }
+            .loginBtn {
+                padding: 1em 3em;
+            }
+            .findBtn {
+                padding: 0.5em 2em;
+            }
+        }
+    }
+
+}
+
+.cards {
+
+    
+    span {
+        position: relative;
+        display: inline;
+      
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%; // Start from the middle
+            transform: translateX(-50%); // Shift it back to the left by half of its width
+            width: 100%; // Make the pseudo-element as wide as the span element
+            bottom: 15px; // Position at the bottom of the text
+            height: 18px; // Height of the colored part, adjust as needed
+            background-color: var(--green-span); // The green color for the background
+            z-index: -1;
+        }
+      }
+
+    .buttonPrimary, .buttonSecond {
+        cursor: pointer;
+        padding: 12px 24px;
+        margin: 10px 0;
+        width: fit-content;
+        display: inline-block;
+        margin-right: 10px;
+        
+    }
+    .buttonPrimary {
+        padding: 15px 25px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: var(--green-darker);
+        color: var(--whiter);
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    .buttonSecond {
+        padding: 15px 25px;
+        margin-right: 10px;
+        border: 1px solid var(--green-btnSecond);
+        border-radius: 4px;
+        background-color: transparent;
+        color: var(--green-btnSecond);
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.wave {
+   margin: 0;
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+    }
+}
+
+
+
+
+// .cards {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     margin: auto;
+//     width: 100%;
+
+//     .cardPrimary, .cardSecond {
+        
+//         margin-bottom: 2rem;
+
+//     }
+//     .buttonPrimary, .buttonSecondary {
+//         padding: 12px 24px;
+//         margin: 10px 0;
+//         width: fit-content;
+//         display: inline-block;
+//         margin-right: 10px;
+        
+//     }
+//     .buttonPrimary {
+//         padding: 10px 20px;
+//         margin-right: 10px;
+//         border: none;
+//         border-radius: 4px;
+//         background-color: #005f73;
+//         color: white;
+//         cursor: pointer;
+//         &:last-child {
+//             margin-right: 0;
+//         }
+//     }
+//     .buttonSecondary {
+//         padding: 10px 20px;
+//         margin-right: 10px;
+//         border: none;
+//         border-radius: 4px;
+//         background-color: #005f73;
+//         color: white;
+//         cursor: pointer;
+//         &:last-child {
+//             margin-right: 0;
+//         }
+//     }
+// }
