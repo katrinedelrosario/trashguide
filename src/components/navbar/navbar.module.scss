@@ -10,10 +10,16 @@
 
   
 
-    .header {
+    .logo {
       display: flex;
       align-items: center;
       justify-content:flex-start;
+      a {
+        display: flex;
+    text-decoration: none;
+    color: inherit;
+    align-items: center;
+      }
  
       h1 {
         color: var(--black);

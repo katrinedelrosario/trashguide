@@ -9,16 +9,18 @@ export const Navbar = () => {
     
     return (
         <nav className={style.navbarStyle}>
-            <div className={style.header}>
+            <div className={style.logo}>
+                <NavLink to='/frontpage'>
                 <img src={logo} alt="Affaldsguiden Logo" />
                 <Title title='Affaldsguiden'/>
+                </NavLink>
             </div>
 
             <ul>
                 <li><NavLink to="/frontpage">Forside</NavLink></li>
                 <li><NavLink to="/sorting">Sortering</NavLink></li>
                 <li><NavLink to="/stations">Genbrugsstationer</NavLink></li>
-                <li><NavLink to="/order-container">Bestil beholder</NavLink></li>
+                <li><NavLink to="/order">Bestil beholder</NavLink></li>
                 
             </ul>
 

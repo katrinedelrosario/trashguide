@@ -1,6 +1,10 @@
+import style from '../sortingpage/sortingpage.module.scss'
+
 export const Sortingpage = () => {
 
     return (
-        <div></div>
+        <div className={style.background}>
+        </div>
+        
     )
 }
