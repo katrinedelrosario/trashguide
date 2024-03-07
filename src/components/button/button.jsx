@@ -1,11 +1,16 @@
 import { useNavigate } from "react-router-dom"
 
-export const Button = ( {text, className, to}) => {
+export const Button = ( {text, className, to, onClick}) => {
 
     const navigate = useNavigate()
 
     const handleClick = () => {
-        navigate(to)
+        if (onClick) {
+            onClick()
+        }
+        else if (to) {
+            navigate(to)
+        }
     }
 
     return (
