@@ -7,6 +7,8 @@ import { Sortingpage } from './pages/sortingpage/sortingpage';
 import { Stationspage } from './pages/stationspage/stationspage';
 import { Orderpage } from './pages/orderpage/orderpage';
 
+
+
 function App() {
   return (
     <>
@@ -14,7 +16,6 @@ function App() {
         <Routes>
           <Route path='/' element={<MainLayout />}>
           <Route index element={<Frontpage />} />
-          <Route path='/frontpage' element={<Frontpage />} />
           <Route path='/sorting' element={<Sortingpage/>} />
           <Route path='/stations' element={<Stationspage />} />
           <Route path='/order' element={<Orderpage />} />
