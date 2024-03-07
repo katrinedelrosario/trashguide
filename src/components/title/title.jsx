@@ -1,5 +1,5 @@
 import style from "./title.module.scss"
 
-export const Title = ({title}) => {
-    return <h1 className={style.title}>{title}</h1>
+export const Title = ({title, className}) => {
+    return <h1 className={className}>{title}</h1>
 }
