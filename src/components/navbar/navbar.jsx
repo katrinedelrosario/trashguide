@@ -6,7 +6,6 @@ import lockIcon from '../../assets/images/layout/icon-unlock.svg';
 import ellipseBg from '../../assets/images/layout/green-ellipse.svg';
 export const Navbar = () => {
 
-    
     return (
         <nav className={style.navbarStyle}>
             <div className={style.logo}>
@@ -17,11 +16,10 @@ export const Navbar = () => {
             </div>
 
             <ul>
-                <li><NavLink to="/frontpage">Forside</NavLink></li>
-                <li><NavLink to="/sorting">Sortering</NavLink></li>
-                <li><NavLink to="/stations">Genbrugsstationer</NavLink></li>
-                <li><NavLink to="/order">Bestil beholder</NavLink></li>
-                
+                <li><NavLink to="/" className={({ isActive }) => isActive ? style.activeLink : style.a}>Forside</NavLink></li>
+                <li><NavLink to="/sorting" className={({ isActive }) => isActive ? style.activeLink : style.a}>Sortering</NavLink></li>
+                <li><NavLink to="/stations" className={({ isActive }) => isActive ? style.activeLink : style.a}>Genbrugsstationer</NavLink></li>
+                <li><NavLink to="/order" className={({ isActive }) => isActive ? style.activeLink : style.a}>Bestil beholder</NavLink></li>
             </ul>
 
             <div className={style.loginBtn}>

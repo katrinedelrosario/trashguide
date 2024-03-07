@@ -1,81 +1,83 @@
-@import url('../../globalStyle.scss');
-@import url('../title/title.module.scss');
+@import url("../../globalStyle.scss");
+@import url("../title/title.module.scss");
 
 .navbarStyle {
-  padding: 15px 0 15px 0;
+
+  padding: 35px 0 35px 0;
   text-decoration: none;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-
-  
-
-    .logo {
-      display: flex;
-      align-items: center;
-      justify-content:flex-start;
-      a {
-        display: flex;
-    text-decoration: none;
-    color: inherit;
+  .logo {
+    display: flex;
     align-items: center;
-      }
- 
-      h1 {
-        color: var(--black);
-        font-size: 22px;
-        font-weight:600;
-        margin-left: 14px;
-        margin-right: 2em;
-
-      }
+    justify-content: flex-start;
+    a {
+      display: flex;
+      text-decoration: none;
+      color: inherit;
+      align-items: center;
+    }
+    h1 {
+      color: var(--black);
+      font-size: 22px;
+      font-weight: 600;
+      margin-left: 14px;
+      margin-right: 2em;
+    }
     img {
       width: 27.789px;
       height: 41px;
     }
-}
-    ul {
-      display: flex;
+  }
+  ul {
+    display: flex;
 
-        li {
-          list-style: none;
-          padding-right: 4em;
-      
-          a {
-            font-family: var(--nav);
-            font-size: 18px;
-            color: var(--secondary);
-            text-decoration: none;
-            transition: all 0.2s ease;
-          }
-          a:active {
-            color: #6DA830;
-            border-top: solid 1px #6DA830;
-          }
-        }
+    li {
+      list-style: none;
+      padding-right: 4em;
+
+      a {
+        font-family: var(--nav);
+        font-size: 18px;
+        color: var(--secondary);
+        text-decoration: none;
+        transition: all 0.2s ease;
+
       }
-    .loginBtn {
-      position: relative;
-      .lockIcon {
-        width: 5vw;
-        max-width: 10.143px;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-      }
-      .ellipse {
-        width: 10vw;
-        max-width: 27px;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 0;
-      }
-     
+    }
+  }
+
+  .loginBtn {
+    position: relative;
+    .lockIcon {
+      width: 5vw;
+      max-width: 10.143px;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+    .ellipse {
+      width: 10vw;
+      max-width: 27px;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+    }
+  }
 }
+.activeLink {
+  color: var(--greenActive)!important;
+  padding-top: 1em;
+  border-top: solid 2px #6da830;
+  font-family: var(--nav);
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.2s ease;
 }
