@@ -35,7 +35,7 @@
                 cursor: pointer;
                 transition: all 0.2s ease;
                 &:hover {
-                    background-color: var(--green-lt);
+                    background-color: var(--green-hover);
                 }
             }
             .loginBtn {
@@ -103,13 +103,11 @@
 }
 
 .wave {
-   margin: 0;
-    img {
-        max-width: 100%;
-        height: auto;
-        margin: 0;
-    }
-}
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+     }
 
 
 

@@ -1,6 +1,6 @@
-import {Card} from "../../components/cardBig/card"
 import { Slider } from "../../components/slider/slider"
 import style from '../frontpage/frontpage.module.scss'
+import { Card } from "../../components/highlightCard/card"
 import trashBig from '../../assets/images/too-much-trash.png'
 import trashBins from '../../assets/images/colored-trashbins.png'
 import { Button } from "../../components/button/button"
