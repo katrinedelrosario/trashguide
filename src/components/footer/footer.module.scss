@@ -1,9 +1,8 @@
-
+@import '../../globalStyle.scss';
 .footer {
     width: 100%;
     margin-top: 0;
     height: 25vh;
-    border-top: solid 1px #eee;
     color: #FFFFFFB2;
     position: relative;
     left: 0;
@@ -20,14 +19,12 @@
         justify-content: space-between;
         width: 100%;
 
-
         .content {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             width: 18em;
             margin-left: 2em;
-            
 
             .logo {
                 display: flex;
@@ -39,11 +36,9 @@
                 p {
                     font-size: 18px;
                     color: white;
-                    
                 }
                 img {
                     width: 23px;
-                   
                 }
             }
             .firstP, .secondP {
