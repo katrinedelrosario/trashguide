@@ -5,9 +5,12 @@
     margin-bottom: 5em;
     margin-top: 5em;
     //margin-left: 12em;
+
     gap: 3em;
     &.reversed {
-        flex-direction: row-reverse;
+        //flex-direction: row-reverse;
+        direction: rtl;
+
     }
     .content {
         width: 40em;
@@ -37,7 +40,7 @@
         }
     }
 
-    .imageWrapper {
+    .imgWrapper {
         flex: 0 0 50%;
         display: flex;
         align-items: center;
@@ -46,125 +49,10 @@
 
         img {
             display: block;
-            width: 25em; //38em //85em
-            height: 30em; //44em //60em
+            width: 25em;
+            height: 30em;
             object-fit: cover;
             border-radius: 15px;
         }
     }
 }
-
-// .cardWrapper {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     gap: 2rem;
-//     flex-wrap: wrap;
-//     background-color: #fff;
-//     border-radius: 8px;
-//     overflow: hidden;
-//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-//     width: 100%;
-//     @media (max-width: 768px) {
-//         flex-direction: column; // Stack image and content vertically on smaller screens
-//     }
-
-//      &.reversed {
-//          flex-direction: row-reverse;
-//      }
-//     .content {
-//         flex-basis: 40%; // Adjust this percentage as needed
-//         padding: 20px;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-between;
-//         order: 2;
-
-//         h2 {
-//             color: #333;
-//             margin-bottom: 10px;
-//         }
-
-//         p {
-//             color: #666;
-//             margin-bottom: 20px; // This margin may need to be adjusted
-//         }
-
-//         .actions {
-//             display: flex;
-//             flex-direction: column;
-//             gap: 10px;
-//         }
-//     }
-
-//     .imageWrapper {
-//         order: 1;
-//         img {
-//             width: 50%;
-//             height: auto;
-//             object-fit: cover;
-//             //object-position: -20% 0;
-//             //object-fit: cover;
-//         }
-//     }
-// }
-
-// .card {
-//     display: flex;
-//     max-width: 100%;
-//     margin: 0 auto;
-//     flex-direction: row;
-
-//     align-items: center;
-//     justify-content: space-between;
-//     background-color: #fff;
-//     border-radius: 8px;
-//     overflow: hidden;
-//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-//     &.reversed {
-//         flex-direction: row-reverse;
-//     }
-
-//     .content {
-//         flex: 1;
-//         padding: 20px;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-between;
-
-//         h2 {
-//             color: #333;
-//             margin-bottom: 10px;
-//         }
-
-//         p {
-//             color: #666;
-//             margin-bottom: 20px;
-//         }
-
-//         .actions {
-//             // button {
-//             //     padding: 10px 20px;
-//             //     margin-right: 10px;
-//             //     border: none;
-//             //     border-radius: 4px;
-//             //     background-color: #005f73;
-//             //     color: white;
-//             //     cursor: pointer;
-//             //     &:last-child {
-//             //         margin-right: 0;
-//             //     }
-//             // }
-//         }
-//     }
-
-//     .imageWrapper {
-//         flex: 1;
-//         img {
-//             display: block;
-//             width: 100%;
-//             height: auto;
-//         }
-//     }
-// }

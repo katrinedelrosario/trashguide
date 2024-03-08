@@ -12,7 +12,6 @@ export const Button = ( {text, className, to, onClick}) => {
             navigate(to)
         }
     }
-
     return (
         <button className={className} onClick={handleClick}>{text}</button>
     )

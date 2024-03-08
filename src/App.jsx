@@ -1,8 +1,7 @@
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { MainLayout } from './layout/mainLayout'
-import { Frontpage } from './pages/frontpage/frontpage'
-import { Login } from './pages/login/login'
+import { MainLayout } from './layout/mainLayout';
+import { Frontpage } from './pages/frontpage/frontpage';
+import { Login } from './pages/login/login';
 import { Sortingpage } from './pages/sortingpage/sortingpage';
 import { Stationspage } from './pages/stationspage/stationspage';
 import { Orderpage } from './pages/orderpage/orderpage';

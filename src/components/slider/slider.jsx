@@ -9,32 +9,36 @@ import paintCans from "../../assets/images/slideshow/malerspande.jpg"
 
 
 export const Slider = () => {
-
+    //predefined imgs for the slider
     const images = [
         {id: 1, filename: forrestTrash, title: 'trash in forrest'},
         {id: 2, filename: beachTrash, title: 'trash on beach'},
         {id: 3, filename: paintCans, title: 'painting cans outside'}
     ]
-
+    //state for keeping track of currelt slideindex
     const [slideIndex, setSlideIndex] = useState(0)
 
+    //effect to cycle through slides every 5 sec (originally timer was made for the mobile version instead of arrows)
     useEffect(() => {
         const timer = setTimeout(() => {
             setSlideIndex(prevIndex => (prevIndex + 1) % images.length)
-        },1000000000) //SET TO 5000
-        return () => clearTimeout(timer)
+        }, 5000) //heres the seconds set
+        return () => clearTimeout(timer) //cleanup timer
     }, [slideIndex, images])
 
+    //go to next slide
     const nextSlide = () => {
         setSlideIndex((prevIndex) => (prevIndex + 1) % images.length)
     }
 
+    //go to previous slide
     const prevSlide = () => {
         setSlideIndex((prevIndex) => (prevIndex -1 + images.length) % images.length)
     }
 
     return (
         <div className={style.sliderContainer}>
+            {/* maps through imgs to display them */}
             {images.map((image, index) => (
                 <div key={image.id} className={
                     `${style.slides} 

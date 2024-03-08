@@ -1,7 +1,7 @@
-import style from './card.module.scss';
+import style from './card.module.scss'
 
 export const Card = ({ image, title, text, action, alt,reversed }) => {
-    const card = `${style.card} ${reversed ? style.reversed : ''}`;
+    const card = `${style.card} ${reversed ? style.reversed : ''}`
 
     return (
         <div className={card}>
@@ -12,9 +12,9 @@ export const Card = ({ image, title, text, action, alt,reversed }) => {
                 {action}
             </div>
             </div>
-            <div className={style.imageWrapper}>
+            <div className={style.imgWrapper}>
                 <img src={image} alt={alt} />
             </div>
         </div>
-    );
-};
+    )
+}

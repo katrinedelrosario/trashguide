@@ -49,7 +49,7 @@ export const Frontpage = () => {
                 />
 
                 </div>
-                <div className={style.cardSecond}>
+                <div className={style.cardSecond} style={{marginLeft:"-10em!important"}} >
                 <Card
                     image={trashBins} 
                     title={<h2>

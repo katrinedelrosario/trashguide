@@ -2,12 +2,13 @@ import { NavLink } from "react-router-dom";
 import logo from "../../assets/images/layout/logo.svg"
 import style from "./navbar.module.scss"
 import { Title } from "../title/title";
-import lockIcon from '../../assets/images/layout/icon-unlock.svg';
-import ellipseBg from '../../assets/images/layout/green-ellipse.svg';
+import lockIcon from '../../assets/images/layout/icon-unlock.svg'
+import ellipseBg from '../../assets/images/layout/green-ellipse.svg'
+
 export const Navbar = () => {
 
     return (
-        <nav className={style.navbarStyle}>
+        <nav className={style.container}>
             <div className={style.logo}>
                 <NavLink to='/frontpage'>
                 <img src={logo} alt="Affaldsguiden Logo" />

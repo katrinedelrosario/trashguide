@@ -12,22 +12,26 @@ import { Button } from "../../components/button/button";
 
 
 export const Login = () => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const [showPassword, setShowPassword] = useState(false);
-    const { setLoginData } = useAuth();
-    const navigate = useNavigate(); 
+    const [username, setUsername] = useState('') //state for storing of username from input
+    const [password, setPassword] = useState('') //state for storing of password from input
+    const [showPassword, setShowPassword] = useState(false) //state for toggeling if the password is shown or not
 
+    const { setLoginData } = useAuth() //function from auth context for update login state
+    const navigate = useNavigate() //for redirection user after successful login
+
+    //handles login form submission
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault(); //prevents default sumbission behavior
         console.log('form submitted');
 
         try {
+            //attempts to login with provided username + password
             const response = await fetch("http://localhost:3000/login", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
+        
                 body: new URLSearchParams({
                     username: username,
                     password: password
@@ -35,19 +39,20 @@ export const Login = () => {
             });
 
             if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
+                throw new Error(`HTTP error! Status: ${response.status}`)
             }
 
-            const data = await response.json();
+            const data = await response.json() //parses the json response
             if (data.token) {
-                sessionStorage.setItem('token', JSON.stringify(data.token));
-                setLoginData({ user: data.user, token: data.token });
-                console.log('logged in');
+                //if token is recieved, saves it + users details in session storage
+                sessionStorage.setItem('token', JSON.stringify(data.token))
+                setLoginData({ user: data.user, token: data.token })
+                console.log('logged in')
                 toast.success(`Logget ind som  ${data.user.firstname} ${data.user.lastname}`, {
                     onClose: () => {
-                        navigate('/frontpage');
+                        navigate('/frontpage') //navigates after successful login
                     }
-                });
+                })
             }
         } catch (error) {
             console.error("Login error:", error);
@@ -56,7 +61,7 @@ export const Login = () => {
         }
     }
 
-    const toggleShowPassword = () => setShowPassword(!showPassword);
+    const toggleShowPassword = () => setShowPassword(!showPassword)
 
     return (
         <div className={style.wrapper}>
@@ -81,7 +86,7 @@ export const Login = () => {
                         />
                         <div className={style.passwordField}>
                             <input
-                                type={showPassword ? "text" : "password"}
+                                type={showPassword ? "text" : "password"} //toggle between text/password input types based on the showPassword state
                                 placeholder="Adgangskode"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
@@ -92,6 +97,7 @@ export const Login = () => {
                                 onClick={toggleShowPassword}
                                 className={style.passwordToggle}
                             >
+                                {/* icon changes based on password is shown or hidden */}
                                 <img src={showPassword ? eyeClosedIcon : eyeOpenIcon} alt="toggle password visibility" />
                               
                             </button>

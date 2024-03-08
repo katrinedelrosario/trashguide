@@ -1,0 +1,51 @@
+.typeListContainer {
+    .typeHeader {
+        display: flex;
+        margin-top: 2rem;
+        margin-bottom: 1em;
+        text-align: center;
+        justify-content: center;
+    }
+  
+    .typeName {
+      font-size: 1.25rem;
+    }
+  
+    .badge {
+      border-radius: 15px;
+      padding: 0.25rem 0.75rem;
+      margin-left: 1.5em;
+      font-size: 0.75rem;
+      &.approved {
+        background-color: #D8EADB; /* Replace with your actual color code */
+        color: #3F7749;
+      }
+      &.notApproved {
+        background-color: #EAD8D8; /* Replace with your actual color code */
+        color: #773F3F;
+      }
+    }
+  
+    .typeList {
+        display: flex;
+        overflow-x: auto;
+        margin-bottom: 2em;
+        list-style-type: none;
+        padding: 1em;
+        white-space: nowrap;
+        border-top: 1px solid #ddd;
+        width: 35em;
+
+      li {
+
+        display: inline-block;
+        white-space: nowrap; // Keep text from wrapping
+        margin-right: 20px;
+        //padding: 1em;
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+      }
+    }
+  }
+  
